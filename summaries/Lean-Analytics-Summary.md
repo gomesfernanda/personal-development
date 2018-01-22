@@ -41,3 +41,34 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 	- It's reasonable to update your metrics accordingly.
 	- Make early assumptions and set targets for what you think success looks like, but don't experiment yourself into oblivion. Lower the bar if necessary, but not for the sake of getting over it.
 	- Use qualitative data to understand what value you're creating and adjust only if the new 'line in the sand' reflects how customers are using your product.
+- Testing creates a kind of scientific comparison that may be useful to justify a change
+- Segmentation
+	- Segment: a group that shares some common characteristic.
+- Cohort analysis
+	- Compares similar groups over time.
+	- One compares cohorts against one another to see if, on the whole, key metrics are getting better over time.
+- A/B and Multivariate testing
+	- Cross-sectional studies: studies in which different groups of test subjects are given different experiences at the same time.
+	- Problem with A/B testing: you'll have more things to test than you'll have traffic.
+
+	- Multivariate analysis: analyze a series of tests done at the same time, relying on statistical analysis of the results to see which of many factors correlates strongly with an improvement in traffic.
+- Much of Lean Analytics is about finding a meaningful metric, then running experiments to improve it until that metric is good enough for you to move to the next problem or next stage of your business.
+
+## Chapter 2: Deciding What to Do With Your Life
+- Lean Canvas: nine boxes organized on a sheet of paper, designed to walk through the most important aspects of business.
+	- Problem (& existing alternatives)
+	- Solution
+	- Key metrics
+	- Unique value proposition (& high-level concept)
+	- Unfair advantage
+	- Channels
+	- Customer segments (& early adopters)
+	- Cost Structure
+	- Revenue streams
+- Don't start a business you’re going to hate.
+- When launching a new venture, you need to properly assess:
+	- If you want to do it.
+	- If you're good doing it.
+	- If you can make money doing it.
+- If you want to do something and are good at it, but can’t be paid to do it, _learn to monetize_.- If you’re good at something and can be paid to do it, but don’t like doing it, _learn to say no_.- If you like to do something and can be paid to do it, but aren’t very good at it, _learn to do it well_.
+- Never start a company on a level playing field— that’s where everyone else is standing.
