@@ -54,7 +54,7 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 	- Multivariate analysis: analyze a series of tests done at the same time, relying on statistical analysis of the results to see which of many factors correlates strongly with an improvement in traffic.
 - Much of Lean Analytics is about finding a meaningful metric, then running experiments to improve it until that metric is good enough for you to move to the next problem or next stage of your business.
 
-## Chapter 2: Deciding What to Do With Your Life
+## Chapter 3: Deciding What to Do With Your Life
 - Lean Canvas: nine boxes organized on a sheet of paper, designed to walk through the most important aspects of business.
 	- Problem (& existing alternatives)
 	- Solution
