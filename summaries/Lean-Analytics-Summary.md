@@ -72,3 +72,25 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 	- If you can make money doing it.
 - If you want to do something and are good at it, but can’t be paid to do it, _learn to monetize_.- If you’re good at something and can be paid to do it, but don’t like doing it, _learn to say no_.- If you like to do something and can be paid to do it, but aren’t very good at it, _learn to do it well_.
 - Never start a company on a level playing field— that’s where everyone else is standing.
+
+## Chapter 4: Data-Driven Versus Data-Informed
+- Data-driven machine optimization, when not moderated by human judgement, can cause problems.
+	- Humans do inspiration, machines do validation.
+	- Optimization is all about finding the lowest or highest values of a particular function. A machine can find an optimal setting, but it will be a *local* optimal.
+	- Humans, on the other hand, can find other "functions".
+	- Math is good at optimizing a known system; humans are good at finding a new one.
+- Machine-only optimization suffers from limitations. If you're optimizing for local maxima, you might be missing a bigger, more important opportunity.
+- Companies can get *too* data-driven. Instead, they could be more data-informed.
+- How to think like a data scientist: avoid common pitfalls like...
+	- Assuming the data is clean.
+	- Not normalizing.
+	- Excluding outliers.
+	- Including outliers.
+	- Ignoring seasonality.
+	- Ignoring size when reporting growth.
+	- Data vomit.
+	- Metrics that cry wolf.
+	- The "Not Collected Here" syndrome.
+	- Focusing on noise.
+- Entrepreneurs should find the perfect combination between big vision and data.
+- You need to think of Lean Startup as the process you use to mode toward and achieve your vision.
