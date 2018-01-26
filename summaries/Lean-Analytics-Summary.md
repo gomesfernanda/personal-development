@@ -132,3 +132,19 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 - Lean Analytics Stages and Gates:
 	- 5 stages: Empathy, Stickiness, Virality, Revenue and Scale.
 ![Stages and Gates](http://i65.tinypic.com/2ur12kx.png)
+
+### Chapter 6: The Discipline of One Metric That Matters
+- One of the keys to startup success is _focus_.
+- "One Metric That Matters" (OMTM): a single metric that's incredibly important for the step you're currently working through.
+- OMTM is the number you're completely focused on above everything else.
+- Besides the OMTM, you'll track the KPIs. And other metrics will be stored for future use.
+- "Too much" data can be counterproductive: you can get lost in strange trends on numbers that are not big picture, and also lose time reporting metrics that don't lead to action.
+- Pick a minimal set of KPIs on which your business assumptions rely.
+- 4 reasons to use OMTM:
+	- It answers the most important question you have.
+	- It forces you to draw a line in the sand and have clear goals.
+	- It focuses the entire company.
+	- It inspires a culture of experimentation.
+- Besides knowing the metric you should focus on, you need to draw a line in the sand: pick a number, set it as a target, and have enough confidence that if you hit it, you consider it a success.
+- Optimizing your OMTM squeezes your metrics getting the most out of it, but also reveals the next place you need to focus your efforts.
+- Whatever your current OMTM, expect it to change. And expect that change to reveal the next piece of data you need to build a better business faster.
