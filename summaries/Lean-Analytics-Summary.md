@@ -102,19 +102,19 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 ### Chapter 5: Analytics Frameworks
 - There are a set of frameworks, and each one offers a different perspective on a startup lifecycle.
 - Some frameworks are:
-- *Dave McClure's Pirate Metrics*
+- **Dave McClure's Pirate Metrics**
 	- metrics that a startup needs fit inside the categories: AARRA = acquisition, activation, retention, revenue and referral.
 	- acquisition: how do users become aware of you? traffic, mentions, CPC, search results, cost acquisition, open rate.
 	- activation: do drive-by visitors subscribe and use? enrollments, signups, completed on boarding process, used the service at least once, subscriptions.
 	- retention: does a one-time user become engaged? engagement, time since last visit, daily and monthly active use, churns.
 	- revenue: do you make money from user activity? customer lifetime value, conversion rate, shopping cart size, click-through revenue.
 	- referral: do users promote your product? invites sent, viral coefficient, viral cycle time.
-- *Eric Ries's Engines of Growth*
+- **Eric Ries's Engines of Growth**
 	- 3 engines that drive the growth of a startup, each one with KPIs.
 	- 1. Sticky Engine: focus of getting users to return. Engagement is key here. Fundamental KPI is user retention.
 	- 2. Virality Engine: is all about getting the word out. Key metric is _viral coefficient_ |(number of new users that bring new ones on).
 	- 3. Paid Engine: payment. Important KPIs: customer lifetime value (CLV) and customer acquisition cost (CAC).
-- *Ash Maurya's Lean Canvas*
+- **Ash Maurya's Lean Canvas**
 	- Box: "Problem" // Metrics: respondents who have this need, respondents who are aware of having the need.
 	- Box: "Solution" // Metrics: respondents who try the MVP, engagement, churn, most/last used features, people willing to pay.
 	- Box: "Unique value proposition" // Metrics: feedback scores, independent ratings, sentiment analysis, customer-worded descriptions, surveys, search, competitive analysis.
@@ -123,11 +123,11 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 	- Box: "Unfair advantage" // Metrics: respondents' understanding of the UVP (unique value proposition), patents, brand equity, barriers to entry, number of new entrants, exclusivity of relationships.
 	- Box: "Revenue streams" // Metrics: lifetime customer value, average revenue per user, conversion rate, shopping cart size, click-through rate.
 	- Box: "Cost structure" // Metrics: fixed costs, cost of customer acquisition, cost of servicing the nth customer, support costs, keyword costs.
-- *Sean Elli's Startup Growth Pyramid*
+- **Sean Elli's Startup Growth Pyramid**
 	- ![SeanElli](http://i64.tinypic.com/2ho90zo.png)
 	- This pyramid is focused on _after_ you achieve market fit.
 	- How to know you've achieved market fit: survey with customer asking how they would feel if they could no longer use the product/service. If 40% or more say they'd be disappointed, you're market fit and it's time to scale.
-- *The Long Funnel*
+- **The Long Funnel**
 	- A way of understanding how you first come to someone's attention, and the journey she takes from that initial awareness through a goal you want her to complete.
 - Lean Analytics Stages and Gates:
 	- 5 stages: Empathy, Stickiness, Virality, Revenue and Scale.
