@@ -72,7 +72,9 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 	- If you want to do it.
 	- If you're good doing it.
 	- If you can make money doing it.
-- If you want to do something and are good at it, but can’t be paid to do it, _learn to monetize_.- If you’re good at something and can be paid to do it, but don’t like doing it, _learn to say no_.- If you like to do something and can be paid to do it, but aren’t very good at it, _learn to do it well_.
+- If you want to do something and are good at it, but can’t be paid to do it, _learn to monetize_.
+- If you’re good at something and can be paid to do it, but don’t like doing it, _learn to say no_.
+- If you like to do something and can be paid to do it, but aren’t very good at it, _learn to do it well_.
 - Never start a company on a level playing field— that’s where everyone else is standing.
 
 ### Chapter 4: Data-Driven Versus Data-Informed
@@ -148,3 +150,59 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 - Besides knowing the metric you should focus on, you need to draw a line in the sand: pick a number, set it as a target, and have enough confidence that if you hit it, you consider it a success.
 - Optimizing your OMTM squeezes your metrics getting the most out of it, but also reveals the next place you need to focus your efforts.
 - Whatever your current OMTM, expect it to change. And expect that change to reveal the next piece of data you need to build a better business faster.
+
+### Chapter 7: What business are you in?
+- How you get and make money drives what metrics you should care about.
+- To decide which metrics you should track you need to step back, ignore all the details, and just think about the really big components.
+- One common theme in all startups is that their growth is achieved by one of Eric Ries's fundamental Engines of Growth: an increase in stickiness, virality, or revenue. Each business model need to maximize the trust from these three engines in order to flourish.
+- Business growth comes from improving one of these five "knobs":
+	- **More stuff** means adding more products or services;
+	- **More people** means adding more users, ideally through virality or word of moutg, but also through paid adverstising.
+	- **More often** means stickiness (so people come back), reduced churn (so they don't leave), and repeated use (so they use it more frequently). Early on, stickiness tends to be a key knob on which to focus.
+	- **More money** means upselling and maximizing the price users will pay, or the revenue from ad clicks, or the amount of content they create, or the number of in-game purchases they make.
+	- **More efficiently** means reducing the cost of delivering and supporting your service, and also lowering the cost of customer acquisition.
+- Business models are about getting **people** to do what you want in return for something. But not all people are equel...
+	- Some are good, but on the long run. They can use your free version for a long time until pay for it.
+	- Some provide free marketing: they will never sign up and be paying users.
+	- Some are bad: they distract you, consume resources, etc.
+- You need to segment real, valuable users from drive-by, curious ones. Then you need to make changes that maximize the real users and weed out the bad ones.
+- As a startup, you have a wide range of payment and incentive models from which to choose: fremium, free trial, pay up-front, discount, etc. Your choice needs to match the kind of segmentation you're doing, the time it takes for a user to become a paying customer, how easy it is to use your service, and how costly an additional drive-by user is to the business.
+- A business model is a combination of things: it's what you sell, how you deliver it, how you acquire customers, and how you make money from them.
+- To build a business model you can combine several aspects of a business:
+	- The **acquisiiton channel**: how people find out about you.
+	- The **selling tactic**: how you convince visitors to become users/customers.
+	- The **revenue source**: how you make money.
+	- The **product type**: what value your business offers in return for the revenue.
+	- The **delivery model**: how you get your product to the customer.
+
+### Chapter 8: Model One: E-commerce
+- Early e-commerce consisted on "funnel": a visitor arrived at the page, navigated through sub-pages to reach a particular item, clicked "buy", provided payment information and completed purchase.
+- Modern e-commerce is less simple than early e-commerce:
+	- The majority of buyers find what they're looking for through search, instead of navigating across the pages. This means on-site funnels are outdated; keywords are more important.
+	- Retailers use recommendation engine to anticipare what else a user might want.
+	- Retailers are always optimizing performance, meaning that they're segmenting traffic.
+	- Purchases begin far from the website itself, in social medias, e-mail, online communities and so on.
+- Loyalty-focused e-retailers build a recurring relationship with their users, encouraging customers to build wishlists and review products.
+- It's essential for retailers to know what kind of relationship they have with their customers, because this drives everything from marketing strategy to shopping cart size.
+	- To understand this: *annual repurchase rate*, what % of people who bought from you last year will do so this year?
+	- Acquisition: If less than 40% of last year's buyers will buy this year, then your focus is on new customer acquisition.
+	- Hybrid: If 40-60% of last year's buyers will buy this year, then the company will grow with a mix of new and returning customers. You need to focus on acquisition as well as increasing purchase frequency.
+	- Loyalty: If 60% or more of last year's buyers will buy this year, company needs to focus on loyalty, encouraging customers to buy more frequently.
+- Even before a year has past, an e-commerce can look at a 90-day repurchase rate:
+	- a rate of 1% to 15% means you're in acquisition mode.
+	- a rate of 15% to 30% means you're in hybrid mode.
+	- a rate of +30% means you're in loyalty mode.
+- While it's important to optimize revenues, don't try to make your customers into something they're not, or force seasonal customers to become loyal customers.
+- Some relevant metrics to an e-commerce:
+	- Conversion rate: percentage of visitors to your site that buy something. One of the first metrics you use to assess how you're doing. You'll slice convertion rate in may ways - by demographics, by copy, by referral etc - to see what makes people more likely to buy.
+	- Purchases per year: if you look at the repurchase rate on a 90-day cycle, it becomes a very good leading indicator for what type of e-commercer site you have. There is no right or wrong answer.
+	- Shopping cart size: not only you want to know what percentage of people bought something, you also want to know how much they spent. You may find that one campaign is more likely to make people buy, but another might make fewer people spend more money. In practice, you'll compare the total revenue you're generating to the way in which you acquired that revenue, to identify the most lucrative segments of your audience.
+	- Abandonment: number of people who abandon a funnel in each stage. It's important to analyze it for each step to see which parts of the process are hurting you the most (reviewing shopping cart, providing shipping information, payment process).
+	- Cost of Customer Acquisition: you may be using advertising, social media outreach, mailing lists or affiliates to drive traffic to your site. You have to add it up. By the end of the day, you have to make more from selling things than it costs you to find buyers and deliver goods.
+	- Revenue Per Customer (or lifetime value): important for all types of e-commerce (acquisition, hybrid, loyalty). Even if your business doesn't engender loyalty, you want to maximize revenue by increasing shopping cart size and conversino rate while reducing abandonment.
+	- Keywords and Search Terms: you want to know which keywords drive traffic that turns into money. You'll analyze outside your site (search engines) and within your site (first, you'll be sure what users are after; second, if a significant chunk of searches fall into a category, you should re-position it on your page).
+	- Recommendation Acceptance Rate: there are many different approaches to recommendations. Some use what the buyer has purchased in the pasr, others try to predict purchases from visitors attributes.
+	- Virality: referral and viral attention drives cheap, high-value traffic.
+	- Mailing List Click-Through Rates: if you can the permission to reach out to your customers - and they do what you tell them to - you can keep them engaged far more effectively. You calculate the e-mail click-through rate by dividing the number of visits you get from a campaign by the number of messages you've sent.
+	- Shipping Time: efficiencies like this turn into a competitive advantage, because they let you sell to consumers who are more interested in a faster service.
+	- Stock Availability: improving your inventory management can make a big difference to your bottom line, since sales go down when items are out of stock. It's also interesting to analyze inventory versus sales.
