@@ -75,7 +75,7 @@ Integers are numbers without a decimal component, like 1, 2, 3, etc.
 Go integer types are `uint8`, `uint16`, `uint32`, `uint64`, `int8`, `int16`, `int32` and `int64`. 8, 16, 32 and 64 tell us how many bits each of these types use. `uint` means "unsigned integers", while `int` means "signed integers". Unsigned integers only have positive numbers (and zero).
 Generally, if you're working with integers, you should just use the `int` type.
 
-#### Floating-Point Numbers**
+#### Floating-Point Numbers
 Floating-point numbers are the ones that count with a decimal component, like 1.23, 12.8, 0.00003, etc.
 The actual representation on a computer is fairly complicated and are inexact.
 Like integers, floating-point numbers have a certain size.
