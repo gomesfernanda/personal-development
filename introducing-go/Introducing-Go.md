@@ -124,3 +124,75 @@ A boolean value is a 1-bit integer used to represent true and false. Three logic
 ! - not
 
 We often use booleans to make decisions and represent binary distinctions.
+
+## Chapter 3: Variables
+
+## Chapter 4: Control Structures
+
+## Chapter 5: Arrays, Slices and Maps
+
+## Chapter 6: Functions
+
+## Chapter 7: Structs and Interfaces
+
+###Structs
+A **struct** is a type that contains named fields. For example:
+
+```go
+type Circle struct {
+    x float64
+    y float64
+    r float64
+}
+```
+The `type` keyword introduces a new type. It's followed by the name od the type (`Circle` in this case), the keyword `struct` indicatin that we are defining a struct type, and a list of fields inside of curly braces.
+Fields are like a set of grouped variables. Each fiels has a name and a type and is stored adjacent to the other fields in the struct.
+
+After defining a struct, we can create an instance of our new `Circle` type in many ways
+
+```go
+var c Circle
+c := new(Circle) // this allocates memory for all the fields, sets each of them to their zero value, and returns a pointer to the struct (*Circle)
+c := Circle{x: 0, y: 0, r: 5}
+c := Circle {0, 0, 5}
+c := &Circle{0, 0, 5}
+ ```
+ **NOTE**: pointers are often used with structs so that functions can modify their contents.
+
+ **Fields**
+We can access fields using the `.` operator:
+
+```go
+fmt.Println(c.x, c.y, c.r)
+c.x = 10
+c.y = 5
+```
+
+Creating a function that uses a `Circle`:
+
+```go
+func circleArea(c *Circle) float64 {
+    return math.Pi * c.r*c.r
+}
+```
+
+our `main` stays:
+
+```go
+func main() {
+    c := Circle {0, 0, 5}
+    fmt.Println(circleArea(&c))
+}
+```
+
+Note that we created a pointer inside `circleArea` function and we addressed it on main function. This happens because if we attempted to modify one of the fields inside of the circleArea function, it would not modify the original variable.
+
+###Methods
+
+```go
+func (c *Circle) area() float64 {
+    return math.Pi * c.r*c.r
+}
+```
+
+In between the keyword `func` and the name of the function, we've added a *receiver*, that is like a parameter, but it allows us to call a function using the `.` ooperator: `fmt.Println(c.area())`
