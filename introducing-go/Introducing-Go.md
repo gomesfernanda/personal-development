@@ -135,7 +135,7 @@ We often use booleans to make decisions and represent binary distinctions.
 
 ## Chapter 7: Structs and Interfaces
 
-###Structs
+### Structs
 A **struct** is a type that contains named fields. For example:
 
 ```go
@@ -187,7 +187,7 @@ func main() {
 
 Note that we created a pointer inside `circleArea` function and we addressed it on main function. This happens because if we attempted to modify one of the fields inside of the circleArea function, it would not modify the original variable.
 
-###Methods
+### Methods
 
 ```go
 func (c *Circle) area() float64 {
@@ -196,3 +196,13 @@ func (c *Circle) area() float64 {
 ```
 
 In between the keyword `func` and the name of the function, we've added a *receiver*, that is like a parameter, but it allows us to call a function using the `.` ooperator: `fmt.Println(c.area())`
+
+### Interfaces
+
+```go
+type Shape interface {
+    area() float64
+}
+```
+
+An interface is created using the `type` keyword, followed by a name and the keyword `interface`. But instead of defining fields, we're defining a *method set* (a list of methods that a type must have in order to *implement* the interface).
