@@ -11,11 +11,11 @@
     `setx GOPATH %USERPROFILE%`
     - On OS X: on the terminal, type
 
-    `echo 'export GOPATH=$HOME\n' >> ~/.bash_profile`
+    `$ echo 'export GOPATH=$HOME\n' >> ~/.bash_profile`
 - Go: download and run the installer for your platform from [golang.org/dl](http://golang.org/dl)
     - To confirm everything is working, open a terminal and type:
 
-    `go version`
+    `$ go version`
     This should not throw an error.
 
 **Your first program**
@@ -160,6 +160,7 @@ c := &Circle{0, 0, 5}
  **NOTE**: pointers are often used with structs so that functions can modify their contents.
 
  **Fields**
+ 
 We can access fields using the `.` operator:
 
 ```go
