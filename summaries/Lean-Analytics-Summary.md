@@ -3,11 +3,11 @@
 
 ## PART 1: Stop lying to yourself
 
-### Chapter 1: We're all liars
+### Chapter 1 - We're all liars
 - Sometimes, growth comes from an aspect of your business you don't expect. When you think you've found a worthwhile idea, decide how to test it quickly, with minimal investment. Define what success looks like beforehand, and know what you're going to do if your hunch is right.
 Lean, analytical thinking is about asking the right questions, and focusing on the one key metric that will produce the change you're after.
 
-### Chapter 2: How to Keep Score
+### Chapter 2 - How to Keep Score
 - What makes a good metric?
     - a good metric is comparative.
     - a good metric is understandable.
@@ -56,7 +56,7 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
     - Multivariate analysis: analyze a series of tests done at the same time, relying on statistical analysis of the results to see which of many factors correlates strongly with an improvement in traffic.
 - Much of Lean Analytics is about finding a meaningful metric, then running experiments to improve it until that metric is good enough for you to move to the next problem or next stage of your business.
 
-### Chapter 3: Deciding What to Do With Your Life
+### Chapter 3 - Deciding What to Do With Your Life
 - Lean Canvas: nine boxes organized on a sheet of paper, designed to walk through the most important aspects of business.
     - Problem (& existing alternatives)
     - Solution
@@ -77,7 +77,7 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 - If you like to do something and can be paid to do it, but aren’t very good at it, _learn to do it well_.
 - Never start a company on a level playing field— that’s where everyone else is standing.
 
-### Chapter 4: Data-Driven Versus Data-Informed
+### Chapter 4 - Data-Driven Versus Data-Informed
 - Data-driven machine optimization, when not moderated by human judgment, can cause problems.
     - Humans do inspiration, machines do validation.
     - Optimization is all about finding the lowest or highest values of a particular function. A machine can find an optimal setting, but it will be a *local* optimal.
@@ -99,10 +99,10 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 - Entrepreneurs should find the perfect combination of big vision and data.
 - You need to think of Lean Startup as the process you use to move toward and achieve your vision.
 
-## PART 2: Finding the right metric for right now
+## PART 2 - Finding the right metric for right now
 
-### Chapter 5: Analytics Frameworks
-- There are a set of frameworks, and each one offers a different perspective on a startup lifecycle.
+### Chapter 5 - Analytics Frameworks
+- There are a set of frameworks, and each one offers a different perspective on a startup life cycle.
 - Some frameworks are:
 - **Dave McClure's Pirate Metrics**
     - metrics that a startup needs fit into the categories: AARRA = acquisition, activation, retention, revenue, and referral.
@@ -135,7 +135,7 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
     - 5 stages: Empathy, Stickiness, Virality, Revenue, and Scale.
 ![Stages and Gates](http://i65.tinypic.com/2ur12kx.png)
 
-### Chapter 6: The Discipline of One Metric That Matters
+### Chapter 6 - The Discipline of One Metric That Matters
 - One of the keys to startup success is _focus_.
 - "One Metric That Matters" (OMTM): a single metric that's incredibly important for the step you're currently working through.
 - OMTM is the number you're completely focused on above everything else.
@@ -151,7 +151,7 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 - Optimizing your OMTM squeezes your metrics getting the most out of it, but also reveals the next place you need to focus your efforts.
 - Whatever your current OMTM, expect it to change. And expect that change to reveal the next piece of data you need to build a better business faster.
 
-### Chapter 7: What business are you in?
+### Chapter 7 - What business are you in?
 - How you get and make money drives what metrics you should care about.
 - To decide which metrics you should track you need to step back, ignore all the details, and just think about the really big components.
 - One common theme in all startups is that their growth is achieved by one of Eric Ries's fundamental Engines of Growth: an increase in stickiness, virality, or revenue. Each business model needs to maximize the trust from these three engines in order to flourish.
@@ -175,7 +175,7 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
     - The **product type**: what value your business offers in return for the revenue.
     - The **delivery model**: how you get your product to the customer.
 
-### Chapter 8: Model One: E-commerce
+### Chapter 8 - Model One: E-commerce
 - Early e-commerce consisted of "funnel": a visitor arrived at the page, navigated through sub-pages to reach a particular item, clicked "buy", provided payment information and completed purchase.
 - Modern e-commerce is less simple than early e-commerce:
     - The majority of buyers find what they're looking for through search, instead of navigating across the pages. This means on-site funnels are outdated; keywords are more important.
@@ -206,3 +206,41 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
     - Mailing List Click-Through Rates: if you can the permission to reach out to your customers - and they do what you tell them to - you can keep them engaged far more effectively. You calculate the e-mail click-through rate by dividing the number of visits you get from a campaign by the number of messages you've sent.
     - Shipping Time: efficiencies like this turn into a competitive advantage, because they let you sell to consumers who are more interested in a faster service.
     - Stock Availability: improving your inventory management can make a big difference to your bottom line, since sales go down when items are out of stock. It's also interesting to analyze inventory versus sales.
+
+### Chapter 9 - Model Two: Software as a Service (SaaS)
+
+- Most SaaS providers generate revenue from a monthly (or yearly) subscription.
+- Because the incremental cost of adding another customer to a SaaS service is negligible, many SaaS providers use a freemium model of customer acquisition.
+- Key metrics that companies with freemium model and several tiers of subscription are usually aware of:
+    - Attention: how effectively the business attract visitors.
+    - Enrollment: how many visitors become free or trial users.
+    - Stickiness: how much the customers use the product.
+    - Conversion: how many of the free users become paying customers.
+    - Revenue per customer.
+    - Customer acquisition cost.
+    - Virality: how likely customers are to invite others, and how long they take to do so.
+    - Upselling: what makes customers increase their spending, and how often that happens.
+    - Uptime and reliability: how many complaints, problem escalations or outages the company has.
+    - Churn: how many users and customers leave.
+    - Lifetime value: how much customers are worth from cradle to grave.
+- Customer lifetime value (CLV) and Customer Acquisition Cost (CAC) are two essential metrics for a subscription business.
+
+**Measuring Engagement**
+
+- The ultimate metric for engagement is _daily use_.
+- Lesson: bring an early version of your product, and look for where it's got the highest engagement among your customers. Find the subsection os users that are hooked to your product, figure out what's common to them, refocus on their needs, and grow from there.
+- However, your early adopters needs might not reflect those of the bigger, more lucrative mainstream.
+- Besides looking at visit frequency, look for _usage patterns_ inside your application. What are people doing inside your application?
+
+**Churn**
+
+- In a freemium or free-trial business, you should track churn for both users (non-paid) and customers (paid) groups separately.
+- Unpaid users "churn" by cancelling their accounts or not coming back; paid users churn by cancelling their accounts (stopping paying) or reverting to an unpaid version.
+- Formula for churn: (# of churns during period) / (# customers at beginning of period)
+- However, this formula is too simple, since your take a churn that happens in a certain period of time and divide by a snapshot, fixed number of customers.
+- Solution: new formula for the churn.
+- Churn = (number of churns during period)/[(# customers at beginning of period) + (# customers at end of period)]/2
+- However, if you're growing really fast, this solution is also not ideal.
+- Two ways to simplify: 1) measure churn _by cohort_, so you're comparing new to churned users based on when they first became users and 2) measure churn each day.
+- In a SaaS model, most of the complexity comes from 2 things: the promotional approach you choose, and pricing tiers.
+- While freemium gets a lot of visibility, it's actually a _sales tactic_, and you need to use it carefully.
