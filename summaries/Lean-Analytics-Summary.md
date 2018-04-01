@@ -244,3 +244,43 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 - Two ways to simplify: 1) measure churn _by cohort_, so you're comparing new to churned users based on when they first became users and 2) measure churn each day.
 - In a SaaS model, most of the complexity comes from 2 things: the promotional approach you choose, and pricing tiers.
 - While freemium gets a lot of visibility, it's actually a _sales tactic_, and you need to use it carefully.
+
+### Chapter 10 - Model Three: Free Mobile App
+
+- Unlike web applications, where it's easy to do A/B testing and continuous deployment, mobile apps go through the app store gatekeeper.
+- Mobile app developers make money within their applications in several ways:
+    - Downloadable content (such as maps or vehicles).
+    - Flair and customization of in-character appearance and gaming content.
+    - Advantages.
+    - Elimination of countdown timers.
+    - Upselling to a paid version.
+    - In-game ads.
+- A company like this cares about the following metrics:
+    - Downloads
+    - Customer acquisition cost (CAC)
+    - Launch rate (% of people who download, actually launch, and create an account at the app)
+    - Percent of active users/players (daily active users - DAU - or monthly active users - MAU)
+    - Percentage of users who pay
+    - Time to first purchase
+    - Monthly average revenue per user (ARPU)
+    - Ratings click-through
+    - Virality
+    - Churn
+    - Customer lifetime value
+
+**Instalation Volume**
+
+- For mobile developers, the dynamics of an app store matter more than almost anything else when it comes to traction.
+- An app thats already in the top 100 and then gets featured will jump an average of **42** places on the Android market, **27** places on the iPad App Store and **15** places on the iPhone App Store.
+- If you want to make money, you need to be ranked highly in app stores, and getting featured helps a great deal.
+- If you're making a game, you walk a fine line between the compelling content and addictive gameplay that makes things fun and the in-game purchases that bring you money.
+- Besides ARPU, some metrics relate to **playability** and player engagement are important.
+
+**Percentage of users who pay**
+
+- Knowing the difference between users that won't spend money on your game, and users who will spend thousands of dollars, and finding ways to make more users make in-app purchases, is the key to a successfully monetized free mobile application.
+- Beyond the basic metric of "percentage of users that pay something", you want to do segmentation and cohort analysis.
+
+**Churn**
+
+- Track churn at 1 day, 1 week and 1 month, because users leave ar different times for different reasons. Knowing when users churn gives you an indication of why they're churning and what you can try in order to keep them longer.
