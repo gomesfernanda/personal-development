@@ -284,3 +284,72 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 **Churn**
 
 - Track churn at 1 day, 1 week and 1 month, because users leave ar different times for different reasons. Knowing when users churn gives you an indication of why they're churning and what you can try in order to keep them longer.
+
+### Chapter 11 - Model Four: Media Site
+
+- If your business model most closely resembles a media site, then your primary focus is sharing advertisers' messages with viewers, and getting paid for impressions, click-throughs, or sales.
+- Ad revenue sometimes is tied to the number of clicks on ads; sometimes it's simply a display advertising shown each time there's an engagement with a visitor.
+- Media sites care most of all about *click-through* or *display rates*, since those are actual revenue, but they also need to maximize visitor's time on the website, number of pages visited and number of unique visitors, since those things represent inventory.
+- Striking a balance between commercial screen space and valuable content is tricky but important, since too much space displaying ads undermines the site's quality and keep visitors from coming back.
+- 4 revenue models common to media sites: sponsorship, display advertising, click-based advertising and affiliate.
+- Ultimately, media sites care about:
+
+1) Audience and churn
+- The more people who visit your site, the more money you'll make.
+- Engagement is much more important that traffic, so knowing how many visitors you're losing is critical.
+
+2) Ad inventory
+- Number of impressions that can be monetized.
+- The total number of unique page views in a given period of time, since each page view is a chance to show a visitor an ad.
+- The actual inventory depends on page layout and how many advertising elements are on each page.
+
+3) Ad rates
+- How much a site can make from those impressions based on the content it covers and people who visit.
+- The rate advertising networks will pay yu for an ad depends on your content and the going rate for a particular search ter or keyword.
+
+4) Click-through rates
+- How many of the impressions actually turn into money.
+
+5) Content/advertising balance
+- Decisions to be made by media site companies:
+    - Ad space: too many ads leads to lousy content and reduced visitor loyalty.
+    - Content: if your content is written to attract lucrative ad words, it'll feel forced and seem like a paid promotion.
+
+### Chapter 12 - Model Five: User- Generated Content
+
+- Businesses like Facebook, reddit and Twitter.
+- Primary concern is the growth of an engaged community that creates content.
+- In this model, one is focused on the creation of good content: not only posts but also votes, comments, spam flagging etc.
+- Engagement funnel: trying to move your population to higher and higher levels of engagement, turning lurkers into voters, voters into commenters, etc.
+- UGC company cares about metrics as:
+
+1) Number of engaged visitors
+- How often people come back, and how long they stick around.
+- Common metrics: day-to-week ratio and days since last visit.
+
+2) Content creation
+- Percentage of visitors that interact with content in some way.
+- User participation varies wildly by UGC site and depending on what you're asking users to do.
+
+3) Engagement funnel changes
+- How well the site moves people to more engaged levels of content over time.
+- The key is to move as many users into the more lucrative tier of engagement as possible.
+- One trick to visualize how users are moving on the tiers is comparing tiers of engagement over time: for a given cohort of users, how long does it take them to move to a more valuable state in the funnel?
+
+4)  Value of created content
+- The business benefit of content, from donation to media clicks.
+- If you're trying to decide where to invest in visitor acquisition, you'll want to know which referring sites bring valuable users.
+
+5) Content sharing and virality
+- How content gets shared, and how it drives growth.
+- You want to track how content is shared for several reasons:
+    - You need to know if you're achieving a level of virality that will sustain your business.
+    - You want to understand how content is shared and with whom.
+    - It will help you understand whether you should consider a paywall-style monetization strategy.
+
+6) Notification effectiveness
+- The percentage of users who act on when receiving a notification.
+
+- The UGC business might focus on user contribution above all else, but it still pays its bills with advertising most of the time.
+
+
