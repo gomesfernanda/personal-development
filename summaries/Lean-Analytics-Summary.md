@@ -352,4 +352,31 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
 
 - The UGC business might focus on user contribution above all else, but it still pays its bills with advertising most of the time.
 
+### Chapter 13 - Model Six: Two-Sided Marketplaces
 
+- In this model, the company makes money when a buyer and a seller come together to complete a transaction.
+- Ebay is the most famous example of this business.
+- Other business models consist of: real state listing buyers and sellers of properties; websites that let artists list projects and collect the support of backers; app stores let software developers list their apps; dating sites allow and inventory of prospective partners to browse one another.
+- In the definition of this book, on a marketplace:
+    - The seller is responsible for listing and promoting the product.
+    - The marketplace owner has a "hands off" approach to the individual transactions.
+    - The buyer and the seller have competing interests.
+- Two-sided marketplaces face a unique problem: they have to attract **both** buyers and sellers.
+- Early on, the big challenge is solving the "chicken and egg"problem of finding enough buyers and sellers.
+- Companies boil down to one thing: *focus on whomever has the money*. Usually, it's the buyers.
+- In the beginning, when you don't have a "third-party" inventory (aka sellers), you can create an artificial inventory and sell it yourself until you have enough sellers in your environment.
+    - For example, when Uber started, they bought available towncars and paid drivers USD 30 per hour to drive passengers around, and switched to a commission model once it had enough demand.
+- If you focus on the buyer side, you can *create demand*, meaning you can pick something for which you can command an initial inventory, then purchase some, or you might take orders with a promise of fulfilling them later.
+- The first step of a two-sided marketplace, and the first thing to measure, is your *ability to create an inventory* (supply) or *an audience* (demand).
+- The common metrics are:
+    - Buyer and seller growth (measured by returning visitors over time).
+    - Inventory growth (the rate at which sellers are adding inventory).
+    - Search effectiveness (what buyers are searching for, and whether it matches the inventory).
+    - Conversion funnels (conversion rates for items sold, and any segmentation that reveals what helps sell items).
+        - The funnel will have several stages, starting with the number of searches done by visitors.
+        - You should also measure the number of *satisfied* transactions.
+    - Ratings and signs of fraud.
+    - Pricing metrics, if you have a bidding method in place.
+- Fraud and trust are big issues for marketplaces. You don't want to assume responsibility for the delivery of goods, but you need to ensure that there are reliable reputation systems.
+- One more major issue is keeping the transaction within the network, meaning to avoid buyers and sellers to find one another through your marketplace, and then concluding their business without getting a transaction fee.
+- 
