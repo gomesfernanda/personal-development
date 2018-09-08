@@ -379,4 +379,3 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
     - Pricing metrics, if you have a bidding method in place.
 - Fraud and trust are big issues for marketplaces. You don't want to assume responsibility for the delivery of goods, but you need to ensure that there are reliable reputation systems.
 - One more major issue is keeping the transaction within the network, meaning to avoid buyers and sellers to find one another through your marketplace, and then concluding their business without getting a transaction fee.
-- 
