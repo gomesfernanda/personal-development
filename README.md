@@ -14,7 +14,7 @@ This is what I figured so far for my development:
 _There's [a repo](https://github.com/gomesfernanda/PGA_study) for that_
 
 - [X] Some descriptive analytics for PGA index file
-- [ ] Descriptive analytics for siva files on PGA according to some criteria
+- [ ] Descriptive analytics for [siva files](https://github.com/src-d/go-siva) on PGA according to some criteria
   - [ ] Download siva files
   - [ ] Examine siva files
   - [ ] Use gitbase to query siva files
@@ -75,9 +75,9 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/9780596516499.do)_
 
 (TBD)
 
-### Go book
+### Introducing Go
 
-_Following ["Introducing Go", by Caleb Doxsey](http://shop.oreilly.com/product/0636920046516.do)_
+_Following [the book by Caleb Doxsey](http://shop.oreilly.com/product/0636920046516.do)_
 
 - [ ] Chapter 01 - Getting Started
 - [ ] Chapter 02 - Types
