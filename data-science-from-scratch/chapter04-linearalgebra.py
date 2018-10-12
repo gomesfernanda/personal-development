@@ -51,7 +51,6 @@ def magnitude(v):
     return math.sqrt(sum_of_squares(v))
 
 # Now we have the pieces to compute the distance between two vectors:
-
 def squared_distances(v, w):
     """(v_1 - w_1) ** 2 + ... + (v_n - w_n) ** 2"""
     return sum_of_squares(vector_subtract(v, w))
