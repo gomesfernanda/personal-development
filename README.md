@@ -30,7 +30,7 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [X] Chapter 05 - Statistics
 - [X] Chapter 06 - Probability
 - [X] Chapter 07 - Hypothesis and Inference
-- [ ] Chapter 08 - Gradient Descent
+- [X] Chapter 08 - Gradient Descent
 - [ ] Chapter 09 - Getting Data
 - [ ] Chapter 10 - Working with Data
 - [ ] Chapter 11 - Machine Learning
