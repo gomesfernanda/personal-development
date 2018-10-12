@@ -29,7 +29,7 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [X] Chapter 04 - Linear Algebra
 - [X] Chapter 05 - Statistics
 - [X] Chapter 06 - Probability
-- [ ] Chapter 07 - Hypothesis and Inference
+- [X] Chapter 07 - Hypothesis and Inference
 - [ ] Chapter 08 - Gradient Descent
 - [ ] Chapter 09 - Getting Data
 - [ ] Chapter 10 - Working with Data
