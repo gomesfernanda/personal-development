@@ -49,6 +49,16 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [ ] Chapter 24 - MapReduce
 - [ ] Chapter 25 - Go Forth and Do Data Science
 
+### Using source{d} stack
+
+_Following ["Introduction to Code As Data & Machine Learning On Code"](https://docs.sourced.tech/intro/)_
+
+- [ ] Getting started with Babelfish
+- [ ] Analyzing Git Repositories
+- [ ] Getting started with gitbase & gitbase web
+- [ ] MLonCode Pre-trained Models
+- [ ] Training MLonCode Models
+
 ### Playing with Kaggle's Titanic dataset
 
 _There's [a repo](https://github.com/gomesfernanda/titanic) for that_
@@ -69,11 +79,17 @@ _There's [a repo](https://github.com/gomesfernanda/titanic) for that_
   - [ ] Artificial neural network
   - [ ] RVM or Relevance Vector Machine
 
+### Lean Analytics Book
+
+_Following [the book](http://shop.oreilly.com/product/0636920026334.do)_
+
+- [ ] To be developed
+
 ### Natural Language Processing with Python
 
 _Following [O'Reilly book](http://shop.oreilly.com/product/9780596516499.do)_
 
-(TBD)
+- [ ] To be developed
 
 ### Introducing Go
 
@@ -91,12 +107,4 @@ _Following [the book by Caleb Doxsey](http://shop.oreilly.com/product/0636920046
 - [ ] Chapter 10 - Concurrency
 - [ ] Chapter 11 - Next Steps
 
-### Using source{d} stack
 
-_Following ["Introduction to Code As Data & Machine Learning On Code"](https://docs.sourced.tech/intro/)_
-
-- [ ] Getting started with Babelfish
-- [ ] Analyzing Git Repositories
-- [ ] Getting started with gitbase & gitbase web
-- [ ] MLonCode Pre-trained Models
-- [ ] Training MLonCode Models
