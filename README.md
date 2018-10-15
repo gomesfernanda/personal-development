@@ -15,7 +15,7 @@ _There's [a repo](https://github.com/gomesfernanda/PGA_study) for that_
 
 - [X] Some descriptive analytics for PGA index file
 - [ ] Descriptive analytics for [siva files](https://github.com/src-d/go-siva) on PGA according to some criteria
-  - [ ] Download siva files
+  - [X] Download siva files
   - [ ] Examine siva files
   - [ ] Use gitbase to query siva files
 
