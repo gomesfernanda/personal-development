@@ -16,7 +16,7 @@ _There's [a repo](https://github.com/gomesfernanda/PGA_study) for that_
 - [X] Some descriptive analytics for PGA index file
 - [ ] Descriptive analytics for [siva files](https://github.com/src-d/go-siva) on PGA according to some criteria
   - [X] Download siva files
-  - [ ] Examine siva files
+  - [X] Examine siva files
   - [ ] Use gitbase to query siva files
 
 ### Data Science from Scratch
@@ -95,12 +95,12 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/9780596516499.do)_
 
 _Following [the book by Caleb Doxsey](http://shop.oreilly.com/product/0636920046516.do)_
 
-- [ ] Chapter 01 - Getting Started
-- [ ] Chapter 02 - Types
-- [ ] Chapter 03 - Variables
-- [ ] Chapter 04 - Control Sctructures
-- [ ] Chapter 05 - Arrays, Slices and Maps
-- [ ] Chapter 06 - Functions
+- [X] Chapter 01 - Getting Started
+- [X] Chapter 02 - Types
+- [X] Chapter 03 - Variables
+- [X] Chapter 04 - Control Sctructures
+- [X] Chapter 05 - Arrays, Slices and Maps
+- [X] Chapter 06 - Functions
 - [ ] Chapter 07 - Structs and Interfaces
 - [ ] Chapter 08 - Packages
 - [ ] Chapter 09 - Testing
