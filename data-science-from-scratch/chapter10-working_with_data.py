@@ -1,6 +1,6 @@
 import math
 import matplotlib.pyplot as plt
-from collections import Counter
+from collections import Counter, defaultdict
 import random
 from chapter04_linearalgebra import shape, get_column, make_matrix
 from chapter05_statistics import correlation
@@ -146,3 +146,50 @@ def try_parse_field(field_name, value, parser_dict):
 def parse_dict(input_dict, parser_dict):
     return { field_name : try_parse_field(field_name, value, parser_dict)
              for field_name, value in input_dict.items() }
+
+
+
+###########################
+#                         #
+#    MANIPULATING DATA    #
+#                         #
+###########################
+
+def picker(field_name):
+    """returns a function that picks a field out of a dict"""
+    return lambda row: row[field_name]
+
+def pluck(field_name, rows):
+    """turn a list of dicts into the list of field_names values"""
+    return map(picker(field_name), rows)
+
+def group_by(grouper, rows, value_transform=None):
+    # key is output of grouper, value is a list of rows
+    grouped = defaultdict(list)
+    for row in rows:
+        grouped[grouper(row)].append(row)
+
+    if value_transform != None:
+        return grouped
+    else:
+        return { key: value_transform(rows)
+                 for key, rows in grouped.items()}
+
+# If I have a dataset with closing prices for stocks per day and I want to ask
+# "what was the highest-ever closing price for each stock?"
+# We can then answer this by doing:
+# max_price_by_symbol = group_by(picker("symbol"), data, lambda rows: max(pluck("closing_price", rows)))
+
+def percent_price_change(yesterday, today):
+    return today["closing_price"] / yesterday["closing_price"] - 1
+
+def day_over_day_changes(grouped_rows):
+    # sort the rows by date
+    ordered = sorted(grouped_rows, key=picker("date"))
+
+    # zip with an pffset to get pais of consecutive days
+    return [{ "symbol" : today["symbol"],
+              "date" : today["date"],
+              "change" : percent_price_change(yesterday, today) }
+              for yesterday, today in zip(ordered, ordered[1:])]
+
