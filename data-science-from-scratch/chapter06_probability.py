@@ -23,8 +23,8 @@ for _ in range(10000):
         either_girl += 1
 
 
-print("P(both | older): ", round(both_girls/older_girl, 2))
-print("P(both | either: ", round(both_girls/either_girl, 2))
+# print("P(both | older): ", round(both_girls/older_girl, 2))
+# print("P(both | either: ", round(both_girls/either_girl, 2))
 
 # density function for uniform distribution:
 
@@ -67,18 +67,19 @@ def call_plot_cdfs():
     plt.title("Various normal cdfs")
     plt.show()
 
+
 def inverse_normal_cdf(p, mu=0, sigma=1, tolerance=0.00001):
     """find approximate inverse using binary search"""
 
-    # if nor standard, compute standard and rescale
+    # if not standard, compute standard and rescale
     if mu != 0 or sigma != 1:
         return mu + sigma * inverse_normal_cdf(p, tolerance=tolerance)
 
-    low_z, low_p = -10.0, 0
-    hi_z, hi_p = 10.0, 1
+    low_z, low_p = -10.0, 0            # normal_cdf(-10) is (very close to) 0
+    hi_z,  hi_p  =  10.0, 1            # normal_cdf(10)  is (very close to) 1
     while hi_z - low_z > tolerance:
-        mid_z = (low_z + hi_z) / 2
-        mid_p = normal_cdf(mid_z)
+        mid_z = (low_z + hi_z) / 2     # consider the midpoint
+        mid_p = normal_cdf(mid_z)      # and the cdf's value there
         if mid_p < p:
             # midpoint is still too low, search above it
             low_z, low_p = mid_z, mid_p
@@ -87,6 +88,8 @@ def inverse_normal_cdf(p, mu=0, sigma=1, tolerance=0.00001):
             hi_z, hi_p = mid_z, mid_p
         else:
             break
+
+    return mid_z
 
 def bernoulli_trial(p):
     return 1 if random.random() < p else 0
@@ -116,5 +119,5 @@ def make_hist(p, n, num_points):
     plt.title("Binomial Distribution vs Normal Approximation")
     plt.show()
 
-make_hist(0.75, 100, 10000)
+# make_hist(0.75, 100, 10000)
 
