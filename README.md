@@ -32,8 +32,8 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [X] Chapter 07 - Hypothesis and Inference
 - [X] Chapter 08 - Gradient Descent
 - [X] Chapter 09 - Getting Data
-- [ ] Chapter 10 - Working with Data
-- [ ] Chapter 11 - Machine Learning
+- [X] Chapter 10 - Working with Data
+- [X] Chapter 11 - Machine Learning
 - [ ] Chapter 12 - k-Nearest Neighbors
 - [ ] Chapter 13 - Naive Bayes
 - [ ] Chapter 14 - Simple Linear Regression
