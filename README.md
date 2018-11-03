@@ -35,7 +35,7 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [X] Chapter 10 - Working with Data
 - [X] Chapter 11 - Machine Learning
 - [X] Chapter 12 - k-Nearest Neighbors
-- [ ] Chapter 13 - Naive Bayes
+- [X] Chapter 13 - Naive Bayes
 - [ ] Chapter 14 - Simple Linear Regression
 - [ ] Chapter 15 - Multiple Regression
 - [ ] Chapter 16 - Logistic Regression
