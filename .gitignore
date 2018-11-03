@@ -41,3 +41,6 @@ config.rst
 package-lock.json
 
 persdev/
+
+*ham/
+spam/
