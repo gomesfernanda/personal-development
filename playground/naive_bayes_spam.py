@@ -1,12 +1,8 @@
 from sklearn.naive_bayes import MultinomialNB, BernoulliNB
-import re
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import precision_score, recall_score, accuracy_score
 
-
-def tokenize(message):
-    message = message.lower()
-    all_words = re.findall("[a-z0-9']+", message)
-    return list(set(all_words))
 
 def get_data_sms(filename):
     data_sms = []
@@ -31,32 +27,16 @@ for i in range(len(data_sms)):
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(features)
 
+X_train, X_test, y_train, y_test = train_test_split(X, target, test_size=.4, random_state=42)
+
 mnb = MultinomialNB()
 
-y_pred = mnb.fit(X, target).predict(X)
+y_pred = mnb.fit(X_train, y_train).predict(X_test)
 
-count = 0
-true_positive = 0
-pred_positives = 0
-false_negative = 0
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
 
-for i in range(len(y_pred)):
-    if y_pred[i] != target[i]:
-        count += 1
-    # Let's count the numbers to calculate precision:
-    if y_pred[i] == True:
-        pred_positives += 1
-        if y_pred[i] == target[i]:
-            true_positive +=1
-    # Let's count the numbers to calculate recall:
-    if target[i] == True and y_pred[i] == False:
-        false_negative += 1
-
-
-fraction = count / len(y_pred)
-accuracy = 1 - fraction
-precision = true_positive / pred_positives
-recall = true_positive / (true_positive + false_negative)
 print("Accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
