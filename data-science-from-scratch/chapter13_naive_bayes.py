@@ -2,7 +2,7 @@ import re, glob, os
 from collections import defaultdict, Counter
 from math import log, exp
 import random
-from chapter11_machine_learning import split_data
+from chapter11_machine_learning import split_data, accuracy, precision, recall
 
 
 
@@ -13,7 +13,8 @@ def tokenize(message):
     return set(all_words)
 
 def count_words(training_set):
-    """training set consist of pairs (message, is_spam)"""
+    """training set consist of pairs (message, is_spam)
+    returns a dictionary whose keys are the words and values are two-element lists [spam_count, non_spam_count]"""
     counts = defaultdict(lambda: [0, 0])
     for message, is_spam in training_set:
         for word in tokenize(message):
@@ -94,39 +95,7 @@ def get_subject_data(path):
                 if line.startswith("Subject:"):
                     subject = subject_regex.sub("", line).strip()
                     data.append((subject, is_spam))
-
     return data
-
-path = os.getcwd() + "/*/*"
-# now we can split the data into training and test sets
-data = get_subject_data(path)
-random.seed(0)
-train_data, test_data = split_data(data, 0.75)
-
-classifier = NaiveBayesClassifier()
-classifier.train(train_data)
-
-# triplets (subject, actual is_spam, predicted spam probability)
-classified = [( subject, is_spam, classifier.classify(subject))
-              for subject, is_spam in test_data]
-
-# assume that spam_probability > 0.5 corresponds to spam prediction
-# and count the combinations of (actual is_spam, predicted is_spam)
-
-counts = Counter((is_spam, spam_probability > 0.5)
-                 for _, is_spam, spam_probability in classified)
-print(counts)
-
-# sort by spam_probability from smallest to largest
-classified.sort(key=lambda row: row[2])
-
-# the highest predicted spam probabilities among the non-spams
-spammiest_hams = list(filter(lambda row: not row[1], classified))[-5:]
-
-# the lowest predicted spam probabilities among the actual spams
-hammiest_spams = list(filter(lambda row: row[1], classified))[:5]
-
-# let'' look at the spammiest words
 
 def p_spam_given_word(word_prob):
     """uses baye's theorem to compute p(spam | message contains word)"""
@@ -135,9 +104,128 @@ def p_spam_given_word(word_prob):
     word, prob_if_spam, prob_if_no_spam = word_prob
     return prob_if_spam / (prob_if_spam + prob_if_no_spam)
 
-words = sorted(classifier.word_probs, key=p_spam_given_word)
 
-spammiest_words = words[-5:]
-hammiest_words = words[:5]
-print(spammiest_words)
-print(hammiest_words)
+def train_and_test_classifier(path):
+    # we will first split the data into training and test sets
+    data = get_subject_data(path)
+
+    random.seed(0)
+    train_data, test_data = split_data(data, 0.75)
+
+    # create the "classifier" object
+    classifier = NaiveBayesClassifier()
+    classifier.train(train_data)
+
+    # triplets (subject, actual is_spam, predicted spam probability)
+    classified = [( subject, is_spam, classifier.classify(subject))
+                  for subject, is_spam in test_data]
+
+    # assume that spam_probability > 0.5 corresponds to spam prediction
+    # and count the combinations of (actual is_spam, predicted is_spam)
+
+    counts = Counter((is_spam, spam_probability > 0.5)
+                     for _, is_spam, spam_probability in classified)
+    print(counts)
+    tp = counts[(True, True)]
+    fp = counts[(True, False)]
+    fn = counts[(False, True)]
+    tn = counts[(False, False)]
+    # sort by spam_probability from smallest to largest
+    classified.sort(key=lambda row: row[2])
+
+    # the highest predicted spam probabilities among the non-spams
+    spammiest_hams = list(filter(lambda row: not row[1], classified))[-5:]
+
+    # the lowest predicted spam probabilities among the actual spams
+    hammiest_spams = list(filter(lambda row: row[1], classified))[:5]
+
+    print("spammiest_hams", spammiest_hams)
+    print("hammiest_spams", hammiest_spams)
+
+    # let'' look at the spammiest words
+
+
+
+    words = sorted(classifier.word_probs, key=p_spam_given_word)
+
+    spammiest_words = words[-5:]
+    hammiest_words = words[:5]
+    print("spammiest words", spammiest_words)
+    print("hammiest words", hammiest_words)
+
+    print("accuracy: ", round(accuracy(tp, fp, fn, tn),2))
+    print("precision: ", round(precision(tp, fp, fn, tn), 2))
+    print("recall: ", round(recall(tp, fp, fn, tn), 2))
+
+# path = os.getcwd() + "/*/*"
+# train_and_test_classifier(path)
+
+
+#### TOTALLY off-book, but I decided to play with SMS Spam dataset available at https://data.world/lylepratt/sms-spam
+
+def get_data_sms(filename):
+    data_sms = []
+    with open(filename, 'r', encoding='utf-8') as file:
+        for line in file:
+            is_spam = "ham" not in line
+            if is_spam == True:
+                line = line.replace("spam	","")
+            else:
+                line = line.replace("ham	", "")
+            data_sms.append((line.rstrip(), is_spam))
+    return data_sms
+
+def train_and_test_classifier_sms(data_file):
+    # we will first split the data into training and test sets
+    data = data_file
+
+    random.seed(0)
+    train_data, test_data = split_data(data, 0.75)
+
+    # create the "classifier" object
+    classifier = NaiveBayesClassifier()
+    classifier.train(train_data)
+
+    # triplets (subject, actual is_spam, predicted spam probability)
+    classified = [( subject, is_spam, classifier.classify(subject))
+                  for subject, is_spam in test_data]
+
+    # assume that spam_probability > 0.5 corresponds to spam prediction
+    # and count the combinations of (actual is_spam, predicted is_spam)
+
+    counts = Counter((is_spam, spam_probability > 0.5)
+                     for _, is_spam, spam_probability in classified)
+    print(counts)
+    tp = counts[(True, True)]
+    fp = counts[(True, False)]
+    fn = counts[(False, True)]
+    tn = counts[(False, False)]
+
+    # sort by spam_probability from smallest to largest
+    classified.sort(key=lambda row: row[2])
+
+    # the highest predicted spam probabilities among the non-spams
+    spammiest_hams = list(filter(lambda row: not row[1], classified))[-5:]
+
+    # the lowest predicted spam probabilities among the actual spams
+    hammiest_spams = list(filter(lambda row: row[1], classified))[:5]
+
+    print("spammiest_hams", spammiest_hams)
+    print("hammiest_spams", hammiest_spams)
+
+    # let's look at the spammiest words
+    words = sorted(classifier.word_probs, key=p_spam_given_word)
+
+    spammiest_words = words[-5:]
+    hammiest_words = words[:5]
+    print("spammiest words", spammiest_words)
+    print("hammiest words", hammiest_words)
+
+    print("accuracy: ", round(accuracy(tp, fp, fn, tn),2))
+    print("precision: ", round(precision(tp, fp, fn, tn), 2))
+    print("recall: ", round(recall(tp, fp, fn, tn), 2))
+
+
+file = "SMSSpamCollection.txt"
+data_sms = get_data_sms(file)
+train_and_test_classifier_sms(data_sms)
