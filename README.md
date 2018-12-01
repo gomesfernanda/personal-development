@@ -37,9 +37,9 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [X] Chapter 12 - k-Nearest Neighbors
 - [X] Chapter 13 - Naive Bayes
 - [X] Chapter 14 - Simple Linear Regression
-- [ ] Chapter 15 - Multiple Regression
-- [ ] Chapter 16 - Logistic Regression
-- [ ] Chapter 17 - Decision Trees
+- [X] Chapter 15 - Multiple Regression
+- [X] Chapter 16 - Logistic Regression
+- [X] Chapter 17 - Decision Trees
 - [ ] Chapter 18 - Neural Networks
 - [ ] Chapter 19 - Clustering
 - [ ] Chapter 20 - Natural Language Processing
