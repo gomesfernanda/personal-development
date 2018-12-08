@@ -1,8 +1,10 @@
-from sklearn import datasets, tree, ensemble
+from sklearn.datasets import load_digits, fetch_mldata
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 
-digits = datasets.load_digits()
+digits = load_digits()
 X = digits.data
 Y = digits.target
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=.4, random_state=42)
@@ -15,7 +17,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=.4, random_s
 
 print("\n\n======================== DECISION TREES ========================\n")
 
-clf_dt = tree.DecisionTreeClassifier()
+clf_dt = DecisionTreeClassifier()
 
 clf_fit_dt = clf_dt.fit(X_train, Y_train)
 Y_pred_dt = clf_fit_dt.predict(X_test)
@@ -37,7 +39,7 @@ print("Recall using Decision Trees", round(recall_dt,4))
 
 print("\n\n======================== RANDOM FOREST ========================\n")
 
-clf_rf = ensemble.RandomForestClassifier()
+clf_rf = RandomForestClassifier()
 clf_fit_rf = clf_rf.fit(X_train, Y_train)
 Y_pred_rf = clf_fit_rf.predict(X_test)
 
