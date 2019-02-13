@@ -107,4 +107,18 @@ _Following [the book by Caleb Doxsey](http://shop.oreilly.com/product/0636920046
 - [ ] Chapter 10 - Concurrency
 - [ ] Chapter 11 - Next Steps
 
+### Misc
 
+_Concepts that I have no clue about and have to study/practice_
+
+- [X] reflog
+- [X] git bisect
+- [X] binaries
+- [X] packfile
+- [X] namespace
+- [X] xpath
+- [X] testing
+- [X] SDK
+- [X] debug
+- [X] drotobuf
+- [X] rpc
