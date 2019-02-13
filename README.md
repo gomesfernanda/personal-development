@@ -111,14 +111,14 @@ _Following [the book by Caleb Doxsey](http://shop.oreilly.com/product/0636920046
 
 _Concepts that I have no clue about and have to study/practice_
 
-- [X] reflog
-- [X] git bisect
-- [X] binaries
-- [X] packfile
-- [X] namespace
-- [X] xpath
-- [X] testing
-- [X] SDK
-- [X] debug
-- [X] drotobuf
-- [X] rpc
+- [ ] reflog
+- [ ] git bisect
+- [ ] binaries
+- [ ] packfile
+- [ ] namespace
+- [ ] xpath
+- [ ] testing
+- [ ] SDK
+- [ ] debug
+- [ ] protobuf
+- [ ] rpc
