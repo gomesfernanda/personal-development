@@ -40,7 +40,7 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [X] Chapter 15 - Multiple Regression
 - [X] Chapter 16 - Logistic Regression
 - [X] Chapter 17 - Decision Trees
-- [ ] Chapter 18 - Neural Networks
+- [X] Chapter 18 - Neural Networks
 - [ ] Chapter 19 - Clustering
 - [ ] Chapter 20 - Natural Language Processing
 - [ ] Chapter 21 - Network Analysis
