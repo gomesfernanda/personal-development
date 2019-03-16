@@ -5,6 +5,12 @@ import re
 from collections import defaultdict
 import random
 
+##################
+#                #
+#   WORD CLOUD   #
+#                #
+##################
+
 def plot_resumes(data):
     def text_size(total):
         """equals 8 if total is 0, 28 if total is 200"""
@@ -20,6 +26,14 @@ def plot_resumes(data):
     plt.xticks([])
     plt.yticks([])
     plt.show()
+
+
+###################
+#                 #
+#     N-GRAMS     #
+#                 #
+###################
+
 
 def fix_unicode(text):
     return text.replace(u"\u2019", "'")
@@ -79,6 +93,40 @@ def generate_using_trigrams(starts, trigram_transitions):
         if current == ".":
             return " ".join(result)
 
+
+###################
+#                 #
+#     GRAMMAR     #
+#                 #
+###################
+
+def is_terminal(token):
+    return token[0] != "_"
+
+def expand(grammar, tokens):
+    for i, token in enumerate(tokens):
+
+        # skip over terminals
+        if is_terminal(token): continue
+
+        # if we get here, we found a non-terminal token
+        # so we need to choose a replacement at random
+        replacement = random.choice(grammar[token])
+
+        if is_terminal(replacement):
+            tokens[i] = replacement
+        else:
+            tokens = tokens[:i] + replacement.split() + tokens[(i+1):]
+
+        # now call expand on the new list of tokens
+        return expand(grammar, tokens)
+
+    # if we get here we had all terminals and are done
+    return " ".join(tokens)
+
+def generate_sentence(grammar):
+    return expand(grammar, ["_S"])
+
 if __name__ == '__main__':
 
     data = [ ("big data", 100, 15), ("Hadoop", 95, 25), ("Python", 75, 50),
@@ -89,19 +137,38 @@ if __name__ == '__main__':
              ("self-starter", 30, 50), ("customer focus", 65, 15),
              ("thought leadership", 35, 35)]
 
-    plot_resumes(data)
-
-    document_list = get_document()
-
+    run_wordcloud = 0
     run_bigram = 0
-    run_trigram = 1
+    run_trigram = 0
+    run_grammar = 1
+
+    if run_wordcloud == 1:
+        plot_resumes(data)
 
     if run_bigram == 1:
+        document_list = get_document()
         bigram_transitions = get_bigrams_transitions(document_list)
         generated_document_bigram = generate_using_bigrams(bigram_transitions)
         print(generated_document_bigram)
 
     if run_trigram == 1:
+        document_list = get_document()
         starts, trigram_transitions = get_trigrams_transitions(document_list)
         generated_document_trigram = generate_using_trigrams(starts, trigram_transitions)
         print(generated_document_trigram)
+
+    if run_grammar == 1:
+        grammar = {
+            "_S"  : ["_NP _VP"],
+            "_NP" : ["_N",
+                     "_A _NP _P _A _N"],
+            "_VP" : ["_V _NP",
+                     "_V _NP"],
+            "_N"  : ["data science", "Python", "regression", "NLP", "matrix", "machine learning", "clustering", "Hadoop", "Tensorflow"],
+            "_A"  : ["big", "linear", "logistic", "dense", "sparse", "accurate", "advanced"],
+            "_P"  : ["about", "near", "with", "before"],
+            "_V"  : ["learns", "trains", "tests", "is", "grows", "sets", "expands", "validate", "results"]
+        }
+
+        sentence = generate_sentence(grammar)
+        print(sentence)
