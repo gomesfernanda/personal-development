@@ -3,6 +3,7 @@ import random
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
+import datetime
 np.seterr(over='ignore')
 
 class KMeans:
@@ -199,14 +200,12 @@ if __name__ == '__main__':
         plt.show()
 
     if recolor == 1:
+        print(datetime.datetime.now())
         path_to_png_file = "to_recolor.jpg"
         recolor_image(path_to_png_file)
+        print(datetime.datetime.now())
 
     if bottom_up == 1:
-        leaf1 = ([10, 20], )      # to make a 1-tuple you need the trailing comma
-        leaf2 = ([30, -15], )     # otherwise Python treats the parentheses as parentheses, not tuple
-
-        merged = (1, [leaf1, leaf2])
 
         base_cluster = bottom_up_cluster(inputs)
 
