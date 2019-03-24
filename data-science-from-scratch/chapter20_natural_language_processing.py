@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 import requests
 import re
-from collections import defaultdict
+from collections import defaultdict, Counter
 import random
 
 ##################
@@ -127,6 +127,83 @@ def expand(grammar, tokens):
 def generate_sentence(grammar):
     return expand(grammar, ["_S"])
 
+######################
+#                    #
+#   GIBBS SAMPLING   #
+#                    #
+######################
+
+def roll_a_die():
+    return random.choice([1, 2, 3, 4, 5, 6])
+
+def direct_sample():
+    d1 = roll_a_die()
+    d2 = roll_a_die()
+    return d1, d1 + d2
+
+def random_y_given_x(x):
+    """equally likely to be a x + 1, x + 2, x + 3, ... , x + 6"""
+    return x + roll_a_die()
+
+def random_x_given_y(y):
+    if y <= 7:
+        # if the total is 7 or less, the first die is equally likely to be
+        # 1, 2, ..., (total - 1)
+        return random.randrange(1, y)
+    else:
+        # if the total is 7 or more, the first die is equally likely to be
+        # (total - 6), (total - 5), ..., 6
+        return random.randrange(y - 6, 7)
+
+def gibbs_sample(num_iters=100):
+    x, y = 1, 2         # doesn't really matter
+    for _ in range(num_iters):
+        x = random_x_given_y(y)
+        y = random_y_given_x(x)
+    return x, y
+
+def compare_samples(num_iters=100):
+    counts = defaultdict(lambda: [0, 0])
+    for _ in range(num_iters):
+        counts[gibbs_sample()][0] += 1
+        counts[direct_sample()][1] += 1
+    return counts
+
+
+######################
+#                    #
+#   TOPIC MODELING   #
+#                    #
+######################
+
+def sample_from(weights):
+    """ returns i with the probability weights[i] / sum(weights) """
+    total = sum(weights)
+    rnd = total * random.random()           # uniform between 0 and total
+    for i, w in enumerate(weights):
+        rnd -= w                            # return the smallest i such that
+        if rnd <= 0: return i               # weights[0] + ... + weights[i] >= rnd
+
+def p_topic_given_document(topic, d, alpha=0.1):
+    """the fraction of words in document _d_
+    that are assigned to _topic_ (plus some smoothing)"""
+
+    return ((document_topic_counts[d][topic] + alpha) / (document_lengths[d] + K * alpha))
+
+def p_word_given_topic(word, topic, beta=0.1):
+    """the fraction of words assigned to _topic_
+    that equal _word_ (plus some smoothing)"""
+    return ((topic_word_counts[topic][word] + beta) / (topic_counts[topic] + W * beta))
+
+def topic_weight(d, word, k):
+    """given a document and a word in that document,
+    return the weight for the kth topic"""
+    return p_word_given_topic(word, k) * p_topic_given_document(k, d)
+
+def choose_new_topic(d, word):
+    return sample_from([topic_weight(d, word, k) for k in range(K)])
+
+
 if __name__ == '__main__':
 
     data = [ ("big data", 100, 15), ("Hadoop", 95, 25), ("Python", 75, 50),
@@ -140,7 +217,8 @@ if __name__ == '__main__':
     run_wordcloud = 0
     run_bigram = 0
     run_trigram = 0
-    run_grammar = 1
+    run_grammar = 0
+    run_topic_modeling = 1
 
     if run_wordcloud == 1:
         plot_resumes(data)
@@ -172,3 +250,90 @@ if __name__ == '__main__':
 
         sentence = generate_sentence(grammar)
         print(sentence)
+
+    if run_topic_modeling == 1:
+        documents = [
+            ["Hadoop", "Big Data", "HBase", "Java", "Spark", "Storm", "Cassandra"],
+            ["NoSQL", "MongoDB", "Cassandra", "HBase", "Postgres"],
+            ["Python", "scikit-learn", "scipy", "numpy", "statsmodels", "pandas"],
+            ["R", "Python", "statistics", "regression", "probability"],
+            ["machine learning", "regression", "decision trees", "libsvm"],
+            ["Python", "R", "Java", "C++", "Haskell", "programming languages"],
+            ["statistics", "probability", "mathematics", "theory"],
+            ["machine learning", "scikit-learn", "Mahout", "neural networks"],
+            ["neural networks", "deep learning", "Big Data", "artificial intelligence"],
+            ["Hadoop", "Java", "MapReduce", "Big Data"],
+            ["statistics", "R", "statsmodels"],
+            ["C++", "deep learning", "artificial intelligence", "probability"],
+            ["pandas", "R", "Python"],
+            ["databases", "HBase", "Postgres", "MySQL", "MongoDB"],
+            ["libsvm", "regression", "support vector machines"]
+        ]
+
+        K = 4
+
+        # a list of Counters, one for each document // how many times each topic is assigned to each document
+        document_topic_counts = [Counter() for _ in documents]
+
+        # a list of Counters, one for each topic // how many times each word is assigned to each topic
+        topic_word_counts = [Counter() for _ in range(K)]
+
+        # a list of numbers, one for each topic // the total number of words assigned to each topic
+        topic_counts = [0 for _ in range(K)]
+
+        # a list of numbers, one for each document // the total number of words contained in each document
+        document_lengths = [len(d) for d in documents]
+
+        # the number of distinct words
+        distinct_words = set(word for document in documents for word in document)
+        W = len(distinct_words)
+
+        # the number of documents
+        D = len(documents)
+
+        random.seed(0)
+        document_topics = [[random.randrange(K) for word in document] for document in documents]
+
+        for d in range(D):
+            for word, topic in zip(documents[d], document_topics[d]):
+                document_topic_counts[d][topic] += 1
+                topic_word_counts[topic][word] += 1
+                topic_counts[topic] += 1
+
+        for iter in range(1000):
+            for d in range(D):
+                for i, (tord, topic) in enumerate(zip(documents[d], document_topics[d])):
+
+                    # remove this word / topic from the counts
+                    # so that it doesn't influence the weights
+                    document_topic_counts[d][topic] -= 1
+                    topic_word_counts[topic][word] -= 1
+                    topic_counts[topic] -= 1
+                    document_lengths[d] -= 1
+
+                    # choose a new topic based on the weights
+                    new_topic = choose_new_topic(d, word)
+                    document_topics[d][i] = new_topic
+
+                    # and now add it back to the counts
+                    document_topic_counts[d][new_topic] += 1
+                    topic_word_counts[new_topic][word] += 1
+                    topic_counts[new_topic] += 1
+                    document_lengths[d] += 1
+
+        for k, word_counts in enumerate(topic_word_counts):
+            for word, count in word_counts.most_common():
+                if count > 0: print(k, word, count)
+            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+        topic_names = ["Big Data and programming languages",
+                       "databases",
+                       "machine learning",
+                       "statistics"]
+
+        for document, topic_counts in zip(documents, document_topic_counts):
+            current_topic_counts = topic_counts.most_common()
+            for topic, count in current_topic_counts:
+                if count > 0:
+                    print(topic_names[topic], count)
+            print()
