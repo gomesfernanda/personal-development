@@ -42,7 +42,7 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [X] Chapter 17 - Decision Trees
 - [X] Chapter 18 - Neural Networks
 - [X] Chapter 19 - Clustering
-- [ ] Chapter 20 - Natural Language Processing
+- [X] Chapter 20 - Natural Language Processing
 - [ ] Chapter 21 - Network Analysis
 - [ ] Chapter 22 - Recommender Systems
 - [ ] Chapter 23 - Databases and SQL
