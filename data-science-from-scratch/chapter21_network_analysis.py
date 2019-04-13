@@ -1,4 +1,7 @@
 from collections import deque
+from chapter04_linearalgebra import dot, get_row, get_column, shape, make_matrix, magnitude, scalar_multiply, distance
+from functools import partial
+import random
 
 users = [
     {"id": 0, "name": "Hero"},
@@ -25,11 +28,13 @@ for i, j in friendships:
     users[j]["friends"].append(users[i])        # add j as a friend of i
 
 
+
 ##############################
 #                            #
 #   BETWEENNESS CENTRALITY   #
 #                            #
 ##############################
+
 
 def shortest_paths_from(from_user):
 
@@ -39,7 +44,6 @@ def shortest_paths_from(from_user):
     # a queue of (previous user, next user) that we need to check
     # starts out with all pairs (from user, friend_of_from_user)
     frontier = deque((from_user, friend) for friend in from_user["friends"])
-
     # keep going until we empty the queue
     while frontier:
 
@@ -75,7 +79,6 @@ def shortest_paths_from(from_user):
 
     return shortest_paths_to
 
-
 for user in users:
     user["shortest_paths"] = shortest_paths_from(user)
 
@@ -93,9 +96,86 @@ for source in users:
                     if id not in [source_id, target_id]:
                         users[id]["betweenness_centrality"] += contrib
 
+##############################
+#                            #
+#    CLOSENESS CENTRALITY    #
+#                            #
+##############################
+
+
+def farness(user):
+    """ the sum of the lengths of the shortest paths to each other user """
+    return sum(len(paths[0]) for paths in user["shortest_paths"].values())
+
+for user in users:
+    user["closeness_centrality"] = 1 / farness(user)
+
+
+##############################
+#                            #
+#   EIGENVECTOR CENTRALITY   #
+#                            #
+##############################
+
+def matrix_product_entry(A, B, i, j):
+    return dot(get_row(A, i), get_column(B, j))
+
+def matrix_multiply(A, B):
+    n1, k1 = shape(A)
+    n2, k2 = shape(B)
+    if k1 != n2:
+        raise ArithmeticError("incompatible shapes!")
+
+    return make_matrix(n1, k2, partial(matrix_product_entry, A, B))
+
+def vector_as_matrix(v):
+    """returns the vector v (represented as a list) as a n x 1 matrix"""
+    return [[v_i] for v_i in v]
+
+def vector_from_matrix(v_as_matrix):
+    """returns the n x 1 matrix as a list of values"""
+    return [row[0] for row in v_as_matrix]
+
+def matrix_operate(A, v):
+    v_as_matrix = vector_as_matrix(v)
+    product = matrix_multiply(A, v_as_matrix)
+    return vector_from_matrix(product)
+
+def find_eigenvector(A, tolerance=0.00001):
+    guess = [1 for __ in A]
+
+    while True:
+        result = matrix_operate(A, guess)
+        length = magnitude(result)
+        next_guess = scalar_multiply(1/length, result)
+
+        if distance(guess, next_guess) < tolerance:
+            return next_guess, length # eigenvector, eigenvalue
+
+        guess = next_guess
+
+def entry_fn(i, j):
+    return 1 if (i, j) in friendships or (j, i) in friendships else 0
+
+n = len(users)
+adjacency_matrix = make_matrix(n, n, entry_fn)
+
+eigenvector_centralities, _ = find_eigenvector(adjacency_matrix)
+
+
+
 if __name__ == '__main__':
-    print("Betweenness Centrality")
+    print("~*~*~*~*~* Betweenness Centrality *~*~*~*~*~")
     for user in users:
         print(user["id"], user["betweenness_centrality"])
     print()
 
+    print("~*~*~*~*~* Closeness Centrality *~*~*~*~*~")
+    for user in users:
+        print(user["id"], round(user["closeness_centrality"],4))
+    print()
+
+    print("~*~*~*~*~* Eigenvector Centrality *~*~*~*~*~")
+    for user_id, centrality in enumerate(eigenvector_centralities):
+        print(user_id, centrality)
+    print()
