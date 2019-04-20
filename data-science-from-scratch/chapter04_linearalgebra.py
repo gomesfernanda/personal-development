@@ -94,10 +94,9 @@ def get_column(A, j):
 
 def make_matrix(num_rows, num_cols, entry_fn):
     """returns a num_rows x num_cols matrix
-    whose (i, j)th entry is entry_fn(i, j"""
-    return [[entry_fn(i, j)              # given i, create a list
-             for j in range(num_cols)    #    [entry_fn(i, 0), ...]
-             for i in range(num_rows)]]  # create one list for each i
+    whose (i,j)-th entry is entry_fn(i, j)"""
+    return [[entry_fn(i, j) for j in range(num_cols)]
+            for i in range(num_rows)]
 
 def is_diagonal(i, j):
     """1's on the 'diagonal', 0's everywhere else"""
