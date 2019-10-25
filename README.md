@@ -9,6 +9,16 @@ I already know Python (thanks to [MIT course on edX](https://www.edx.org/course/
 
 This is what I figured so far for my development:
 
+
+### deeplearning.ai's Deep Learning Specialization
+
+- [X] Course 1 - Neural networks and deep learning
+- [ ] Course 2 - Improving deep neural networks
+- [ ] Course 3 - Structuring machine learning projects
+- [ ] Course 4 - Convolutional neural networks
+- [ ] Course 5 - Sequence models
+
+
 ### PGA Study
 
 _There's [a repo](https://github.com/gomesfernanda/PGA_study) for that_
@@ -43,9 +53,9 @@ _Following [O'Reilly book](http://shop.oreilly.com/product/0636920033400.do)_
 - [X] Chapter 18 - Neural Networks
 - [X] Chapter 19 - Clustering
 - [X] Chapter 20 - Natural Language Processing
-- [ ] Chapter 21 - Network Analysis
-- [ ] Chapter 22 - Recommender Systems
-- [ ] Chapter 23 - Databases and SQL
+- [X] Chapter 21 - Network Analysis
+- [X] Chapter 22 - Recommender Systems
+- [X] Chapter 23 - Databases and SQL
 - [ ] Chapter 24 - MapReduce
 - [ ] Chapter 25 - Go Forth and Do Data Science
 
