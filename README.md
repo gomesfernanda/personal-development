@@ -18,6 +18,19 @@ This is what I figured so far for my development:
 - [ ] Course 4 - Convolutional neural networks
 - [ ] Course 5 - Sequence models
 
+### Book "Feature Engineering for Machine Learning"
+
+Summary [here](https://github.com/gomesfernanda/personal-development/blob/master/summaries/Feature-Engineering-for-Machine-Learning.md)
+
+- [X] Chapter 1 - The Machine Learning Pipeline
+- [X] Chapter 2 - Fancy Tricks with Simple Numbers
+- [ ] 3. Text Data: Flattening, Filtering, and Chunking
+- [ ] 4. The Effects of Feature Scaling: From Bag-of-Words to Tf-Idf
+- [ ] 5. Categorical Variables: Counting Eggs in the Age of Robotic Chickens
+- [ ] 6. Dimensionality Reduction: Squashing the Data Pancake with PCA
+- [ ] 7. Nonlinear Featurization via K-Means Model Stacking
+- [ ] 8. Automating the Featurizer: Image Feature Extraction and Deep Learning
+- [ ] 9. Back to the Feature: Building an Academic Paper Recommender
 
 ### PGA Study
 
