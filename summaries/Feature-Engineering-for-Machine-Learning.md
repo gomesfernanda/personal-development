@@ -1,5 +1,5 @@
 # Summary for the book "Feature Engineering for Machine Learning"
-[link for it here](http://shop.oreilly.com/product/0636920049081.do)
+[(Book on O'Reilly)](http://shop.oreilly.com/product/0636920049081.do)
 
 Chapters:
 
