@@ -126,14 +126,14 @@ Lean, analytical thinking is about asking the right questions, and focusing on t
     - Box: "Revenue streams" // Metrics: lifetime customer value, average revenue per user, conversion rate, shopping cart size, click-through rate.
     - Box: "Cost structure" // Metrics: fixed costs, cost of customer acquisition, cost of servicing the nth customer, support costs, keyword costs.
 - **Sean Elli's Startup Growth Pyramid**
-    - ![SeanElli](http://i64.tinypic.com/2ho90zo.png)
+    - ![SeanElli](https://i.imgur.com/VoEn2mU.png)
     - This pyramid is focused on _after_ you achieve market fit.
     - How to know you've achieved market fit: survey with customer asking how they would feel if they could no longer use the product/service. If 40% or more say they'd be disappointed, you're market fit and it's time to scale.
 - **The Long Funnel**
     - A way of understanding how you first come to someone's attention, and the journey she takes from that initial awareness through a goal you want her to complete.
 - Lean Analytics Stages and Gates:
     - 5 stages: Empathy, Stickiness, Virality, Revenue, and Scale.
-![Stages and Gates](http://i65.tinypic.com/2ur12kx.png)
+![Stages and Gates](https://i.imgur.com/pwvTBlC.png)
 
 ### Chapter 6 - The Discipline of One Metric That Matters
 - One of the keys to startup success is _focus_.
